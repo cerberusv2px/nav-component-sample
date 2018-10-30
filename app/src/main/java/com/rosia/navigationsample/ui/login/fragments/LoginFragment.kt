@@ -6,8 +6,10 @@ import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.rosia.navigationsample.R
+import com.rosia.navigationsample.models.User
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {
@@ -29,8 +31,17 @@ class LoginFragment : Fragment() {
             setDisplayHomeAsUpEnabled(false)
         }
         text_register.setOnClickListener {
-            findNavController()
-                .navigate(R.id.action_loginFragment_to_registerFragment)
+            /*val bundle = Bundle()
+            bundle.putInt("dataRegister",2)*/
+
+           val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
+            action.setUserId(12)
+            action.setUser(User(2, "Rx"))
+
+
+            Navigation.findNavController(activity!!, R.id.login_nav_host_fragment).navigate(action)
+
+            //findNavController().navigate(R.id.action_loginFragment_to_registerFragment, action)
         }
 
         text_forgot.setOnClickListener {

@@ -3,7 +3,6 @@ package com.rosia.navigationsample
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.rosia.navigationsample.ui.login.LoginActivity
-import com.rosia.navigationsample.ui.MainActivity
 
 class SplashActivity : AppCompatActivity() {
 

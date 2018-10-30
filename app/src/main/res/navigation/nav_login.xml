@@ -29,7 +29,21 @@
         android:id="@+id/registerFragment"
         android:name="com.rosia.navigationsample.ui.login.fragments.RegisterFragment"
         android:label="RegisterFragment"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register">
+
+
+        <argument
+            android:name="user_id"
+            android:defaultValue="1"
+            app:argType="integer" />
+
+        <argument
+            android:name="user"
+            android:defaultValue="@null"
+            app:argType="com.rosia.navigationsample.models.User"
+            app:nullable="true" />
+
+    </fragment>
 
 
     <fragment
