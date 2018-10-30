@@ -25,7 +25,7 @@ class ForgotPasswordFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         val appCompatActivity = activity as AppCompatActivity
         appCompatActivity.supportActionBar?.apply {
-            title = "Forgot Password"
+            //title = "Forgot Password"
             setDisplayHomeAsUpEnabled(true)
         }
     }
